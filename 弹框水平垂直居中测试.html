@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>幸运大翻牌</title>
+    <link href="css/wxreset.css" rel="stylesheet" type="text/css" />
+    <style>
+    	body{
+    		width:100%;
+    		max-width:630px;
+    	}
+    	.recomTip{
+    		width:100%;
+    		width:100vw;
+    		height:100%;
+    		height: 100vh;
+    		background:rgba(0,0,0,0.5);
+    		position: fixed;
+    		top:0;
+    		left:0;
+    		display:inline;
+    		text-align: center;
+    	}
+    	.recomTip:after{
+    		display: inline-block;
+    		content:'';
+    		width:0;
+    		height:100%;
+    		vertical-align: middle;
+    	}
+    	.midBox{
+    		display: inline-block;
+    		vertical-align: middle;
+    		background:#fff;
+    		border-radius: 5px;
+    	}
+    	.midBox h3{
+		    font-size: 16px;
+			color: #000;
+			text-align: center;
+    	}
+    	.midBox .str{
+		    font-size: 13px;
+			padding: 8px 15px 12px;
+			color: #666;
+    	}
+    	.midBox .btn{
+		    font-size: 15px;
+			color: #037aff;
+			text-align: center;
+			height: 44px;
+			line-height: 44px;
+			border-top: 1px solid #d9d9d9;
+			padding: 3px 0;
+    	}
+    	.midBox .btn span{
+    		display: block;
+		    width: 50%;
+		    float: left;
+		    height: 36px;
+		    line-height: 38px;
+    	}
+    	.midBox .btn .cancel{
+		    color: #999;
+			border-right: 1px solid #d9d9d9;
+    	}
+    	.midBox .btn:after{
+    		content: "";
+		    display: table;
+		    clear: both;
+    	}
+    </style>
+</head>
+<body>
+	<div class="recomTip">
+		<div class="midBox">
+			<h3>温馨提示</h3>
+			<p class="str">发动机清洗与小保养服务同时更换效果更佳哦。</p>
+			<p class="btn">
+				<span class="cancel">取消</span>
+				<span class="sub">立即选择</span>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/zepto.js"></script>
+<script>
+	
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link href="css/wxreset.css" rel="stylesheet" type="text/css" />
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<button>点击</button>
+	</body>
+</html>
+
+<script>
+	var logger={
+		x:0,
+		updateCount:function(){
+			this.x++;
+			console.log(this.x);
+		}
+	}
+//	document.querySelector('button').addEventListener('click',function(){
+//		logger.updateCount();//正确：1,2,3,...  这里正确是因为用了匿名函数包裹
+//	})
+
+	//这里没有用匿名函数，直接调用的外部方法报错！！！
+	//document.querySelector('button').addEventListener('click',logger.updateCount);//报错NaN，this这里被指向了button
+	
+	//正确写法	
+	document.querySelector('button').addEventListener('click',logger.updateCount.bind(logger))//正确：1,2,3，...
+	
+	/*
+	总结： 通常情况下，处理函数都要用一层匿名函数包裹一下，才能维持处理函数本身的this。
+	否则this会被DOM元素替代。
+	可以通过.bind(logger)人为的将其执行时的this指向logger对象
+	.bind()创建了一个函数，当这个函数在被调用的时候，它的 this 关键词会被设置成被传入的值（这里指
+	调用bind()时传入的参数）。
+	
+	先上官网的解释，不管我们个人的解释是多么的接地气，官方API到底还是比较靠谱的：
+	bind方法会创建一个新函数,称为绑定函数.当调用这个绑定函数时,绑定函数会以创建它时传入bind方法的
+	第一个参数作为this,传入bind方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为
+	原函数的参数来调用原函数.
+	*/
+</script>

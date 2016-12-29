@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>幸运大翻牌</title>
+    <link href="css/wxreset.css" rel="stylesheet" type="text/css" />
+    <link href="css/luckflop.css?v=13" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="wrapper" style="background:rgb(16,21,54);">
+		<div class="bannerBg">
+			<img src="img/bg.png" />
+		</div>
+		<div class="content">
+			<div class="poker">
+				<img class="pokerBg" src="img/redBg.png" />
+				<div class="lightimg"></div>
+				<div class="pokerActive">
+					<div class="pokerList">
+						<a class="poker1">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker2">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker3">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker4">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker5">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker6">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker7">
+							<img src="img/gift.png" />
+						</a>
+						<a class="poker8">
+							<img src="img/gift.png" />
+						</a>
+						<!--开始按钮--><!--logined控制显示登录后还有几次机会样式-->
+						<a class="startBtn logined" id="startBtn"><!--未登录开始按钮去掉logined class-->
+							<img class="startIcon" src="img/start.png" />
+							<div class="loginChance">
+								<img src="img/chance1.png" />
+								<span class="num">2</span>
+							</div>
+						</a>
+						
+						<!--点击开始翻牌后的按钮-->
+						<a class="startBtn clicked">
+							<div class="loginChance">
+								<img src="img/chance2.png" />
+								<span class="num">2</span>
+							</div>
+						</a>
+						
+						<!--明天再来吧按钮-->
+						<!--<a class="startBtn finished"></a>-->
+					</div>
+				</div>
+			</div>
+			<div class="broadcast">
+				<img class="broadImg" src="img/broadcast.png" />
+				<div class="broadList">
+					<ul class="broadItem">
+						<li>支付宝1 抽中了 <span>6元</span>美容优惠券</li>
+						<li>支付宝2 抽中了 <span>6元</span>美容优惠券</li>
+						<li>支付宝3 抽中了 <span>6元</span>美容优惠券</li>
+						<li>支付宝4 抽中了 <span>6元</span>美容优惠券</li>
+						<li>支付宝5 抽中了 <span>6元</span>美容优惠券</li>
+						<li>支付宝6 抽中了 <span>6元</span>美容优惠券</li>
+					</ul>
+				</div>
+			</div>
+			<div class="active">
+				<p class="title">品牌活动</p>
+				<a href="#">
+					<img src="img/active.png" />
+				</a>
+			</div>
+			<div class="rule">
+				<h3>活动规则s</h3>
+				<p>每天每人都可免费得到一次翻牌机会；</p>
+				<p>如果分享给好友或者朋友圈可增加一次翻牌机会；</p>
+				<p>每天每人最多翻2次牌；</p>
+				<p>如果抽中了1分洗车券，需要通过语音验证才可以领取成功；</p>
+				<p>本抽奖活动跟苹果公司无关；</p>
+			</div>
+			
+			<!--恭喜您弹窗-->
+			<div style="display: none;" id="popUp" class="popUp">
+				<div class="popPos">
+					<div class="tipClose"></div>
+					<div class="popDetails">
+						<div class="popTitle">
+							<img src="img/congrat.png" />
+						</div>
+						<div class="popContent">
+							<img class="productImg" src="img/product.png" />
+							<p>翻中1分洗车优惠券</p>
+							<div class="validateBtn">
+								<img src="img/validate.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--手机验证弹窗-->
+			<div style="display:none;" class="popCode">
+				<div class="popPos">
+					<div class="tipClose"></div>
+					<div class="popDetails">
+						<p class="title">输入手机号开始抽奖</p>
+						<p class="subtitle">电话拨打中，请注意来电！</p>
+						<div class="inputTel">
+							<input type="text" placeholder="抽中的券会放进手机账户中" />
+						</div>
+						<div class="validCode">
+							<input type="text" placeholder="输入验证码" />
+						</div>
+						<div class="subBtn">去抽奖</div>
+						<p class="tipTxt">没有接到来电？<span>重新验证</span></p>
+					</div>
+				</div>
+			</div>
+			
+			<!--领取成功弹窗popUp popSuccess   分享超过两次领取成功popUp popSuccess aboveTwice-->
+			<div style="display: none;" id="popSuccess" class="popUp popSuccess aboveTwice">
+				<div class="popPos">
+					<div class="tipClose"></div>
+					<div class="popDetails">
+						<div class="popTitle">
+							<img src="img/success.png" />
+						</div>
+						<div class="popContent">
+							<p>券已放入账户中</p>
+							<p class="moreOne">分享后还能再抽一次哦~</p>
+							
+							<!--分享按钮-->
+							<div class="shareBtn">
+								<img src="img/shareTxt.png" />
+							</div>
+							
+							<!--去洗车按钮-->
+							<div class="washBtn">
+								<img src="img/wash.png" />
+							</div>
+							
+							<!--下载APP按钮-->
+							<!--<div class="washBtn appdown">
+								<img src="img/appdown.png" />
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+	//	中奖播报轮播
+	var textRoll=function(obj){
+		$(obj).find("ul").animate({  
+			marginTop : "-28px"  
+		},500,function(){  
+			$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+		})  
+	};
+	$(function(){
+		setInterval('textRoll(".broadList")',3000);
+		
+		
+	});
+	
+	//点击开始翻牌按钮
+	var index=0;
+	$("#startBtn").on("click",function(){
+		$(".pokerList").children().each(function(i){
+			if(!$(this).hasClass("startBtn")){
+				i=i+1;
+				$(this).addClass("flodAnimate"+i);
+				$(this).find("img").attr("src","img/poker.png");
+				
+				setTimeout(function(){
+					var num=[0,1,2,4,7,6,5,3];
+					if(index<8){
+						i=num[index];
+						$(".pokerList a").eq(i).removeClass("flodAnimate").addClass("dealAnimate");
+						$(".startBtn.clicked").show();
+						$(".startBtn.logined").hide();
+						index++;
+					}else{
+						index=0;
+					}
+				},200*i);
+				$(this).on("click",function(){
+					$("#popUp").show().addClass("openPopUp");
+				});
+			}
+		});
+	});
+	
+	//关闭恭喜弹窗
+	$(".popUp").on("click",".popPos .tipClose",function(){
+		$(".popUp").removeClass("openPopUp").addClass("closePopUp");
+	});
+	
+	//关闭手机验证弹窗
+	$(".popCode").on("click",".popPos .tipClose",function(){
+		$(".popCode").removeClass("openPopUp").addClass("closePopUp").hide();
+	});
+	
+	//点击语音验证按钮
+	$(".popUp").on("click",".popContent .validateBtn",function(){
+		$(".popUp").removeClass("openPopUp").addClass("closePopUp").hide();
+		$(".popCode").addClass("openPopUp").show();
+	});
+	
+	//输入手机号点击去抽奖
+	$(".popCode").on("click",".subBtn",function(){
+		$(".popCode .subtitle").show();
+		$(".popCode .validCode").show();
+		$(".popCode .inputTel").hide();
+		$(".popCode .title").text("通过语音验证领取1分券");
+		$(".popCode .tipTxt").css("visibility","visible");
+		$(this).text("验证并领取");
+	});
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link href="css/wxreset.css" rel="stylesheet" type="text/css" />
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<button>点击</button>
+	</body>
+</html>
+<script src="js/zepto.js"></script>
+<script>
+	/*我觉得应该回调都有可能会改变this，因为要重新排队。所以回调要用bind(this)*/
+	function LateBloomer(){
+		this.petalCount=Math.ceil(Math.random()*12)+1;
+		console.log('已调用');
+	}
+	
+	// declare bloom after a delay of 1 second 
+	LateBloomer.prototype.bloom=function(){
+		window.setTimeout(this.declare.bind(this),1000);
+	};
+	
+	LateBloomer.prototype.declare=function(){
+		console.log('I am a beautiful flower with '+this.petalCount+' petals!');
+	}
+	
+	//LateBloomer().bloom(); //报错：Cannot read property 'bloom' of undefined
+	//var late=LateBloomer();//报错：Cannot read property 'bloom' of undefined
+	//LateBloomer();//调用LateBloomer方法成功但是无法使用bloom，因为bloom
+	
+	/*new的不是对象，是构造函数，new +构造函数名称生成对象。如果单就调用方法而言是不需要用new的，
+	 但是new了过后可以调用圆形方法和属性。new一般用在js使用原型和this关键字实现面向对象的过程中*/
+	var late=new LateBloomer();
+	late.bloom();//成功！！
+
+
+</script>

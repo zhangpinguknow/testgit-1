@@ -1,0 +1,1312 @@
+.clearfl::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input:-moz-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder {
+  color: #999999;
+}
+/*弹窗打开动画start*/
+@-webkit-keyframes openPop {
+  from {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+}
+@-moz-keyframes openPop {
+  from {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+}
+@keyframes openPop {
+  from {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+}
+@-webkit-keyframes closePop {
+  from {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+}
+@-moz-keyframes closePop {
+  from {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+}
+@keyframes closePop {
+  from {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+  }
+}
+.openPopUp {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 150ms;
+  -moz-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-name: openPop;
+  -moz-animation-name: openPop;
+  animation-name: openPop;
+}
+.closePopUp {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 150ms;
+  -moz-animation-duration: 150ms;
+  animation-duration: 150ms;
+  -webkit-animation-name: closePop;
+  -moz-animation-name: closePop;
+  animation-name: closePop;
+}
+/*end*/
+/*点击开始收纸牌动画start*/
+@-webkit-keyframes fold1 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 106%, 0);
+    -webkit-transform: translate3d(106%, 106%, 0);
+  }
+}
+@-moz-keyframes fold1 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 106%, 0);
+    -moz-transform: translate3d(106%, 106%, 0);
+  }
+}
+@keyframes fold1 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 106%, 0);
+  }
+}
+@-webkit-keyframes fold2 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 106%, 0);
+    -webkit-transform: translate3d(0, 106%, 0);
+  }
+}
+@-moz-keyframes fold2 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 106%, 0);
+    -moz-transform: translate3d(0, 106%, 0);
+  }
+}
+@keyframes fold2 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 106%, 0);
+  }
+}
+@-webkit-keyframes fold3 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 106%, 0);
+    -webkit-transform: translate3d(-106%, 106%, 0);
+  }
+}
+@-moz-keyframes fold3 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 106%, 0);
+    -moz-transform: translate3d(-106%, 106%, 0);
+  }
+}
+@keyframes fold3 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 106%, 0);
+  }
+}
+@-webkit-keyframes fold4 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 0, 0);
+    -webkit-transform: translate3d(106%, 0, 0);
+  }
+}
+@-moz-keyframes fold4 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 0, 0);
+    -moz-transform: translate3d(106%, 0, 0);
+  }
+}
+@keyframes fold4 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, 0, 0);
+  }
+}
+@-webkit-keyframes fold5 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 0, 0);
+    -webkit-transform: translate3d(-106%, 0, 0);
+  }
+}
+@-moz-keyframes fold5 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 0, 0);
+    -moz-transform: translate3d(-106%, 0, 0);
+  }
+}
+@keyframes fold5 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, 0, 0);
+  }
+}
+@-webkit-keyframes fold6 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, -106%, 0);
+    -webkit-transform: translate3d(106%, -106%, 0);
+  }
+}
+@-moz-keyframes fold6 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, -106%, 0);
+    -moz-transform: translate3d(106%, -106%, 0);
+  }
+}
+@keyframes fold6 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(106%, -106%, 0);
+  }
+}
+@-webkit-keyframes fold7 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -106%, 0);
+    -webkit-transform: translate3d(0, -106%, 0);
+  }
+}
+@-moz-keyframes fold7 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -106%, 0);
+    -moz-transform: translate3d(0, -106%, 0);
+  }
+}
+@keyframes fold7 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -106%, 0);
+  }
+}
+@-webkit-keyframes fold8 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, -106%, 0);
+    -webkit-transform: translate3d(-106%, -106%, 0);
+  }
+}
+@-moz-keyframes fold8 {
+  from {
+    transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, -106%, 0);
+    -moz-transform: translate3d(-106%, -106%, 0);
+  }
+}
+@keyframes fold8 {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-106%, -106%, 0);
+  }
+}
+.foldPoker {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.flodAnimate1 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold1;
+  -moz-animation-name: fold1;
+  animation-name: fold1;
+}
+.flodAnimate2 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold2;
+  -moz-animation-name: fold2;
+  animation-name: fold2;
+}
+.flodAnimate3 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold3;
+  -moz-animation-name: fold3;
+  animation-name: fold3;
+}
+.flodAnimate4 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold4;
+  -moz-animation-name: fold4;
+  animation-name: fold4;
+}
+.flodAnimate5 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold5;
+  -moz-animation-name: fold5;
+  animation-name: fold5;
+}
+.flodAnimate6 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold6;
+  -moz-animation-name: fold6;
+  animation-name: fold6;
+}
+.flodAnimate7 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold7;
+  -moz-animation-name: fold7;
+  animation-name: fold7;
+}
+.flodAnimate8 {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 300ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 300ms;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fold8;
+  -moz-animation-name: fold8;
+  animation-name: fold8;
+}
+/*end*/
+/*发纸牌start*/
+@-webkit-keyframes deal {
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes deal {
+  to {
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes deal {
+  form {
+    transform: translate3d(106%, 106%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.dealPoker {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 100ms;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 100ms;
+  -moz-animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+}
+.dealAnimate {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 100ms;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 100ms;
+  -moz-animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+}
+.dealAnimate {
+  -webkit-animation-name: deal;
+  -moz-animation-name: deal;
+  animation-name: deal;
+}
+/*end*/
+/*闪动图片切换动画start*/
+@-webkit-keyframes lights {
+  from {
+    background: url("../img/light1.png") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
+  to {
+    background: url("../img/light2.png") no-repeat;
+    background-size: 100%;
+  }
+}
+@-moz-keyframes lights {
+  from {
+    background: url("../img/light1.png") no-repeat;
+    background-size: 100%;
+  }
+  to {
+    background: url("../img/light2.png") no-repeat;
+    background-size: 100%;
+  }
+}
+@keyframes lights {
+  from {
+    background: url("../img/light1.png") no-repeat;
+    background-size: 100%;
+  }
+  to {
+    background: url("../img/light2.png") no-repeat;
+    background-size: 100%;
+  }
+}
+.lightimg {
+  -webkit-animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: lights;
+  -moz-animation-name: lights;
+  animation-name: lights;
+}
+/*end*/
+body {
+  background: #101536;
+}
+.wrapper {
+  width: 100%;
+  max-width: 630px;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  background: #101536;
+  margin: 0 auto;
+  min-height: 100%;
+  font-size: 12px;
+  color: #fff;
+}
+.wrapper .bannerBg {
+  width: 100%;
+}
+.wrapper .bannerBg img {
+  width: 100%;
+}
+.wrapper .content {
+  padding: 0 15px 20px 15px;
+}
+.wrapper .content .poker {
+  width: 100%;
+  margin-top: -20%;
+  position: relative;
+}
+.wrapper .content .poker .pokerBg {
+  width: 100%;
+}
+.wrapper .content .poker .lightimg {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  background: url("../img/light2.png") no-repeat;
+  background-size: 100%;
+}
+.wrapper .content .poker .pokerActive {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.wrapper .content .poker .pokerActive .pokerList {
+  position: relative;
+  padding: 5% 6% 8%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.wrapper .content .poker .pokerActive .pokerList a {
+  display: inline-block;
+  width: 27%;
+  height: 27%;
+  position: absolute;
+  z-index: 9;
+}
+.wrapper .content .poker .pokerActive .pokerList a img {
+  width: 100%;
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker1 {
+  top: 7%;
+  left: 7.5%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate1 {
+  transform: translate3d(106%, 106%, 0);
+  -webkit-transform: translate3d(106%, 106%, 0);
+  -moz-transform: translate3d(106%, 106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker2 {
+  top: 7%;
+  left: 36.1%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate2 {
+  transform: translate3d(0, 106%, 0);
+  -webkit-transform: translate3d(0, 106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker3 {
+  top: 7%;
+  left: 65%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate3 {
+  transform: translate3d(-106%, 106%, 0);
+  -webkit-transform: translate3d(-106%, 106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker4 {
+  top: 35%;
+  left: 7.5%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate4 {
+  transform: translate3d(106%, 0, 0);
+  -webkit-transform: translate3d(106%, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker5 {
+  top: 35%;
+  left: 65%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate5 {
+  transform: translate3d(-106%, 0, 0);
+  -webkit-transform: translate3d(-106%, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker6 {
+  top: 63.5%;
+  left: 7.5%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate6 {
+  transform: translate3d(106%, -106%, 0);
+  -webkit-transform: translate3d(106%, -106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker7 {
+  top: 63.5%;
+  left: 36.1%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate7 {
+  transform: translate3d(0, -106%, 0);
+  -webkit-transform: translate3d(0, -106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.poker8 {
+  top: 63.5%;
+  left: 65%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList a.flodAnimate8 {
+  transform: translate3d(-106%, -106%, 0);
+  -webkit-transform: translate3d(-106%, -106%, 0);
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn {
+  background: url(../img/blueBg.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 36.1%;
+  top: 35.5%;
+  line-height: 76px;
+  z-index: 1;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn .startIcon {
+  vertical-align: middle;
+  width: 70%;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn .loginChance {
+  display: none;
+  position: relative;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn .loginChance img {
+  margin-left: 6%;
+  width: 67%;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn .loginChance .num {
+  color: #09317a;
+  position: absolute;
+  font-size: 12px;
+  left: 23%;
+  font-weight: bold;
+  top: 8px;
+  font-family: Arial;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn.logined {
+  line-height: 32px;
+  padding: 1.5% 0 0 0;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn.logined .loginChance {
+  display: block;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn.clicked {
+  line-height: 74px;
+  padding: 1.5% 0 0 0;
+  background: #ad0c0c;
+  display: none;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn.clicked .loginChance {
+  display: block;
+}
+.wrapper .content .poker .pokerActive .pokerList .startBtn.finished {
+  background: url(../img/tomorrow.png) no-repeat;
+  background-size: 100%;
+}
+.wrapper .content .broadcast {
+  width: 100%;
+  margin: 6px 0 15px 0;
+  position: relative;
+}
+.wrapper .content .broadcast .broadImg {
+  width: 100%;
+}
+.wrapper .content .broadcast .broadList {
+  position: absolute;
+  top: 15%;
+  left: 31%;
+  height: 60%;
+  overflow: hidden;
+}
+.wrapper .content .broadcast .broadList .broadItem {
+  line-height: 28px;
+}
+.wrapper .content .broadcast .broadList .broadItem li {
+  position: relative;
+}
+.wrapper .content .broadcast .broadList .broadItem li span {
+  color: #ffec00;
+}
+.wrapper .content .active {
+  background: #fff;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+}
+.wrapper .content .active .title {
+  font-size: 13px;
+  color: #666666;
+  padding: 7px 0 7px 0;
+}
+.wrapper .content .active a {
+  display: block;
+}
+.wrapper .content .active a img {
+  width: 100%;
+}
+.wrapper .content .rule h3 {
+  font-size: 16px;
+  text-align: center;
+  background: url(../img/line.png) no-repeat 0;
+  background-size: 100%;
+  width: 100%;
+  margin: 15px 0 2px 0;
+}
+.wrapper .content .rule p {
+  line-height: 26px;
+  position: relative;
+  padding-left: 10px;
+}
+.wrapper .content .rule p::before {
+  position: absolute;
+  content: "";
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  left: 0;
+  top: 11px;
+}
+.wrapper .content .popUp {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.wrapper .content .popUp .popPos {
+  width: 90%;
+  margin: 25% auto 0;
+  max-width: 600px;
+  position: relative;
+}
+.wrapper .content .popUp .popPos .tipClose {
+  position: absolute;
+  right: 1%;
+  top: 8%;
+  width: 25px;
+  background: url(../img/tipclose.png) no-repeat;
+  background-size: 100%;
+  height: 11%;
+  z-index: 9;
+}
+.wrapper .content .popUp .popPos .popDetails {
+  background: url(../img/tipBg1.png) no-repeat;
+  background-size: 100%;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.wrapper .content .popUp .popPos .popDetails .popTitle {
+  position: relative;
+  top: 48px;
+  left: 33%;
+}
+.wrapper .content .popUp .popPos .popDetails .popTitle img {
+  width: 100px;
+}
+.wrapper .content .popUp .popPos .popDetails .popContent {
+  text-align: center;
+  padding: 25% 25px 30px 25px;
+  position: relative;
+}
+.wrapper .content .popUp .popPos .popDetails .popContent .productImg {
+  width: 80%;
+  margin: 0 auto;
+}
+.wrapper .content .popUp .popPos .popDetails .popContent p {
+  font-size: 15px;
+  color: #333333;
+  margin: 10px 0 15px 0;
+}
+.wrapper .content .popUp .popPos .popDetails .popContent .validateBtn {
+  background: url(../img/redBtn.png) no-repeat;
+  width: 100%;
+  background-size: 100%;
+  height: 45px;
+  line-height: 40px;
+  padding-bottom: 3%;
+  box-sizing: content-box;
+}
+.wrapper .content .popUp .popPos .popDetails .popContent .validateBtn img {
+  width: 180px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popTitle {
+  top: 50px;
+  left: 31%;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popTitle img {
+  width: 110px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent {
+  padding: 36% 25px 30px 25px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent p {
+  margin: 0;
+  font-size: 16px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn,
+.wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn {
+  background: url(../img/redBtn.png) no-repeat;
+  width: 100%;
+  background-size: 100%;
+  height: 45px;
+  line-height: 40px;
+  padding-bottom: 4%;
+  box-sizing: content-box;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn img,
+.wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn img {
+  width: 45px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn {
+  margin-top: 25px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn {
+  background: url(../img/yellowBtn.png) no-repeat;
+  background-size: 100%;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn img {
+  width: 60px;
+}
+.wrapper .content .popSuccess .popPos .popDetails .popContent .appdown img {
+  width: 160px;
+}
+.wrapper .content .popSuccess.aboveTwice .popPos .popDetails {
+  background: url(../img/tipBg2.png) no-repeat;
+  background-size: 100%;
+}
+.wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .moreOne {
+  display: none;
+}
+.wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .shareBtn {
+  display: none;
+}
+.wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .washBtn {
+  background: url(../img/redBtn.png) no-repeat;
+  background-size: 100%;
+  margin-top: 40px;
+}
+.wrapper .content .popCode {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.wrapper .content .popCode .popPos {
+  width: 90%;
+  margin: 40% auto 0;
+  max-width: 600px;
+  position: relative;
+}
+.wrapper .content .popCode .popPos .tipClose {
+  position: absolute;
+  right: 1%;
+  top: -60px;
+  width: 25px;
+  background: url(../img/tipclose.png) no-repeat;
+  background-size: 100%;
+  height: 80px;
+  z-index: 9;
+}
+.wrapper .content .popCode .popPos .popDetails {
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 40px 20px 20px 20px;
+}
+.wrapper .content .popCode .popPos .popDetails .title {
+  font-size: 15px;
+  color: #333333;
+  text-align: center;
+}
+.wrapper .content .popCode .popPos .popDetails .subtitle {
+  font-size: 12px;
+  color: #666666;
+  text-align: center;
+  display: none;
+}
+.wrapper .content .popCode .popPos .popDetails .inputTel input,
+.wrapper .content .popCode .popPos .popDetails .validCode input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  padding-left: 40px;
+  font-size: 14px;
+  color: #333333;
+}
+.wrapper .content .popCode .popPos .popDetails .inputTel,
+.wrapper .content .popCode .popPos .popDetails .validCode {
+  position: relative;
+  margin: 30px 0 10px 0;
+}
+.wrapper .content .popCode .popPos .popDetails .inputTel::after,
+.wrapper .content .popCode .popPos .popDetails .validCode::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 16px;
+  background: url(../img/lock.png) no-repeat;
+  background-size: 100%;
+  left: 12px;
+  top: 11px;
+}
+.wrapper .content .popCode .popPos .popDetails .validCode {
+  margin: 15px 0 10px 0;
+  display: none;
+}
+.wrapper .content .popCode .popPos .popDetails .subBtn {
+  background: #df3348;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.wrapper .content .popCode .popPos .popDetails .tipTxt {
+  color: #999999;
+  text-align: right;
+  margin: 20px 0 5px 0;
+  visibility: hidden;
+}
+.wrapper .content .popCode .popPos .popDetails .tipTxt span {
+  color: #2f6cb6;
+}
+@media screen and (min-width: 375px) {
+  .wrapper .content .poker .pokerActive .pokerList .startBtn .startIcon {
+    margin-top: 12%;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn .loginChance .num {
+    font-size: 13px;
+    left: 24%;
+    top: 24%;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.logined {
+    line-height: 40px;
+    padding: 1.5% 0 0 0;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.logined .startIcon {
+    margin-top: 0;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked {
+    line-height: 90px;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked .loginChance .num {
+    top: 11%;
+  }
+  .wrapper .content .broadcast .broadList {
+    top: 18%;
+    height: 53%;
+  }
+  .wrapper .content .popUp .popPos .tipClose {
+    height: 12%;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle {
+    top: 55px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle img {
+    width: 115px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent p {
+    margin: 10px 0 15px 0;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn {
+    height: 55px;
+    line-height: 50px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn img {
+    width: 200px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle {
+    top: 60px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle img {
+    width: 125px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent {
+    padding: 38% 25px 30px 25px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent p {
+    margin: 0;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn,
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn {
+    padding-bottom: 7%;
+    line-height: 48px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn img {
+    width: 50px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn img {
+    width: 70px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown {
+    line-height: 55px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown img {
+    width: 190px;
+  }
+  .wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .washBtn {
+    margin-top: 45px;
+  }
+}
+@media screen and (min-width: 414px) {
+  .wrapper .content .poker .pokerActive .pokerList .startBtn .startIcon {
+    margin-top: 24%;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn .loginChance .num {
+    left: 24.5%;
+    top: 25%;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.logined {
+    line-height: 40px;
+    padding: 3% 0 0 0;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked {
+    line-height: 100px;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked .loginChance .num {
+    top: 10%;
+  }
+  .wrapper .content .broadcast .broadList {
+    top: 20%;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle {
+    top: 60px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle img {
+    width: 125px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent p {
+    margin: 10px 0 20px 0;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn {
+    height: 60px;
+    line-height: 55px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn img {
+    width: 220px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle {
+    top: 65px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle img {
+    width: 135px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent {
+    padding: 38% 25px 30px 25px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent p {
+    margin: 0;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn,
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn {
+    padding-bottom: 9%;
+    line-height: 55px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn {
+    margin-top: 35px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn img {
+    width: 55px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn img {
+    width: 75px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown {
+    line-height: 60px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown img {
+    width: 220px;
+  }
+  .wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .washBtn {
+    margin-top: 55px;
+  }
+}
+@media screen and (min-width: 630px) {
+  .wrapper .content .poker .pokerActive .pokerList .startBtn .startIcon {
+    margin-top: 28%;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.logined {
+    line-height: 45px;
+    padding: 2% 0 0 0;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.logined .loginChance .num {
+    top: 34%;
+    left: 25%;
+    font-size: 18px;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked {
+    line-height: 125px;
+  }
+  .wrapper .content .poker .pokerActive .pokerList .startBtn.clicked .loginChance .num {
+    top: 12%;
+    font-size: 18px;
+    left: 25%;
+  }
+  .wrapper .content .broadcast .broadList {
+    top: 30%;
+    height: 28%;
+  }
+  .wrapper .content .popUp .popPos .tipClose {
+    right: 18%;
+    width: 30px;
+    height: 60px;
+  }
+  .wrapper .content .popUp .popPos .popDetails {
+    max-width: 400px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle {
+    top: 66px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popTitle img {
+    width: 135px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent p {
+    margin: 10px 0 25px 0;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn {
+    height: 65px;
+    line-height: 60px;
+  }
+  .wrapper .content .popUp .popPos .popDetails .popContent .validateBtn img {
+    width: 240px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle {
+    top: 70px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popTitle img {
+    width: 145px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent {
+    padding: 38% 25px 30px 25px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent p {
+    margin: 0;
+    line-height: 24px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn,
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn {
+    padding-bottom: 11%;
+    line-height: 60px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn {
+    margin-top: 35px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .shareBtn img {
+    width: 55px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .washBtn img {
+    width: 75px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown {
+    line-height: 63px;
+  }
+  .wrapper .content .popSuccess .popPos .popDetails .popContent .appdown img {
+    width: 240px;
+  }
+  .wrapper .content .popSuccess.aboveTwice .popPos .popDetails .popContent .washBtn {
+    margin-top: 65px;
+  }
+}
+/*# sourceMappingURL=luckflop.css.map */

@@ -1,0 +1,1324 @@
+.clearfl{
+    &::after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+input::-webkit-input-placeholder {
+    color:rgb(153,153,153);
+}
+
+input:-moz-placeholder {
+    color:rgb(153,153,153);
+}
+
+input::-moz-placeholder {
+    color:rgb(153,153,153);
+}
+
+input:-ms-input-placeholder {
+    color:rgb(153,153,153);
+}
+/*弹窗打开动画start*/
+@-webkit-keyframes openPop{
+    from{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+@-moz-keyframes openPop{
+    from{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+@keyframes openPop{
+    from{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+}
+@-webkit-keyframes closePop{
+    from{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+}
+@-moz-keyframes closePop{
+    from{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+}
+@keyframes closePop{
+    from{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+    }
+}
+.openPopUp{
+    .foldPoker;
+    -webkit-animation-duration: 150ms;
+    -moz-animation-duration: 150ms;
+    animation-duration: 150ms;
+    -webkit-animation-name: openPop;
+    -moz-animation-name: openPop;
+    animation-name: openPop;
+}
+.closePopUp{
+    .foldPoker;
+    -webkit-animation-duration: 150ms;
+    -moz-animation-duration: 150ms;
+    animation-duration: 150ms;
+    -webkit-animation-name: closePop;
+    -moz-animation-name: closePop;
+    animation-name: closePop;
+}
+/*end*/
+
+/*点击开始收纸牌动画start*/
+
+@-webkit-keyframes fold1{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,106%,0);
+        -webkit-transform:translate3d(106%,106%,0);
+    }
+}
+@-moz-keyframes fold1{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,106%,0);
+        -moz-transform:translate3d(106%,106%,0);
+    }
+}
+@keyframes fold1{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,106%,0);
+    }
+}
+@-webkit-keyframes fold2{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,106%,0);
+        -webkit-transform:translate3d(0,106%,0);
+    }
+}
+@-moz-keyframes fold2{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,106%,0);
+        -moz-transform:translate3d(0,106%,0);
+    }
+}
+@keyframes fold2{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,106%,0);
+    }
+}
+@-webkit-keyframes fold3{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,106%,0);
+        -webkit-transform:translate3d(-106%,106%,0);
+    }
+}
+@-moz-keyframes fold3{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,106%,0);
+        -moz-transform:translate3d(-106%,106%,0);
+    }
+}
+@keyframes fold3{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,106%,0);
+    }
+}
+@-webkit-keyframes fold4{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,0,0);
+        -webkit-transform:translate3d(106%,0,0);
+    }
+}
+@-moz-keyframes fold4{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,0,0);
+        -moz-transform:translate3d(106%,0,0);
+    }
+}
+@keyframes fold4{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,0,0);
+    }
+}
+@-webkit-keyframes fold5{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,0,0);
+        -webkit-transform:translate3d(-106%,0,0);
+    }
+}
+@-moz-keyframes fold5{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,0,0);
+        -moz-transform:translate3d(-106%,0,0);
+    }
+}
+@keyframes fold5{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,0,0);
+    }
+}
+@-webkit-keyframes fold6{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,-106%,0);
+        -webkit-transform:translate3d(106%,-106%,0);
+    }
+}
+@-moz-keyframes fold6{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,-106%,0);
+        -moz-transform:translate3d(106%,-106%,0);
+    }
+}
+@keyframes fold6{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(106%,-106%,0);
+    }
+}
+@-webkit-keyframes fold7{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,-106%,0);
+        -webkit-transform:translate3d(0,-106%,0);
+    }
+}
+@-moz-keyframes fold7{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,-106%,0);
+        -moz-transform:translate3d(0,-106%,0);
+    }
+}
+@keyframes fold7{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(0,-106%,0);
+    }
+}
+@-webkit-keyframes fold8{
+    from{
+        transform:translate3d(0,0,0);
+        -webkit-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,-106%,0);
+        -webkit-transform:translate3d(-106%,-106%,0);
+    }
+}
+@-moz-keyframes fold8{
+    from{
+        transform:translate3d(0,0,0);
+        -moz-transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,-106%,0);
+        -moz-transform:translate3d(-106%,-106%,0);
+    }
+}
+@keyframes fold8{
+    from{
+        transform:translate3d(0,0,0);
+    }
+    to{
+        transform:translate3d(-106%,-106%,0);
+    }
+}
+.foldPoker{
+    -webkit-animation-timing-function:ease-in;
+    -webkit-animation-duration: 300ms;
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 300ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-fill-mode: forwards;
+    animation-timing-function:ease-in;
+    animation-duration: 300ms;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+.flodAnimate1{
+    .foldPoker;
+    -webkit-animation-name: fold1;
+    -moz-animation-name: fold1;
+    animation-name: fold1;
+}
+.flodAnimate2{
+    .foldPoker;
+    -webkit-animation-name: fold2;
+    -moz-animation-name: fold2;
+    animation-name: fold2;
+}
+.flodAnimate3{
+    .foldPoker;
+    -webkit-animation-name: fold3;
+    -moz-animation-name: fold3;
+    animation-name: fold3;
+}
+.flodAnimate4{
+    .foldPoker;
+    -webkit-animation-name: fold4;
+    -moz-animation-name: fold4;
+    animation-name: fold4;
+}
+.flodAnimate5{
+    .foldPoker;
+    -webkit-animation-name: fold5;
+    -moz-animation-name: fold5;
+    animation-name: fold5;
+}
+.flodAnimate6{
+    .foldPoker;
+    -webkit-animation-name: fold6;
+    -moz-animation-name: fold6;
+    animation-name: fold6;
+}
+.flodAnimate7{
+    .foldPoker;
+    -webkit-animation-name: fold7;
+    -moz-animation-name: fold7;
+    animation-name: fold7;
+}
+.flodAnimate8{
+    .foldPoker;
+    -webkit-animation-name: fold8;
+    -moz-animation-name: fold8;
+    animation-name: fold8;
+}
+/*end*/
+/*发纸牌start*/
+@-webkit-keyframes deal{
+    to{
+        -webkit-transform: translate3d(0,0,0);
+    }
+}
+@-moz-keyframes deal{
+    to{
+        -moz-transform: translate3d(0,0,0);
+    }
+}
+@keyframes deal{
+    form{
+        transform: translate3d(106%,106%,0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
+.dealPoker{
+    -webkit-animation-timing-function:ease-in;
+    -webkit-animation-duration: 100ms;
+    -webkit-animation-iteration-count:1;
+    -moz-animation-timing-function: ease-in;
+    -moz-animation-duration: 100ms;
+    -moz-animation-iteration-count: 1;
+    animation-timing-function:ease-in;
+    animation-duration: 100ms;
+    animation-iteration-count:1;
+}
+.dealAnimate{
+    .dealPoker;
+}
+.dealAnimate{
+    -webkit-animation-name: deal;
+    -moz-animation-name: deal;
+    animation-name: deal;
+}
+/*end*/
+/*闪动图片切换动画start*/
+@-webkit-keyframes lights {
+    from {
+        background:url("../img/light1.png") no-repeat;
+        background-size:100%;
+        width:100%;
+                position:absolute;
+                height:100%;
+                top:0;
+    }
+
+    to {
+        background:url("../img/light2.png") no-repeat;
+        background-size:100%;
+    }
+}
+
+@-moz-keyframes lights {
+    from {
+        background:url("../img/light1.png") no-repeat;
+        background-size:100%;
+    }
+
+    to {
+        background:url("../img/light2.png") no-repeat;
+        background-size:100%;
+    }
+}
+
+@keyframes lights {
+    from {
+        background:url("../img/light1.png") no-repeat;
+        background-size:100%;
+    }
+
+    to {
+        background:url("../img/light2.png") no-repeat;
+        background-size:100%;
+    }
+}
+
+.lightimg{
+    -webkit-animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    -webkit-animation-name: lights;
+    -moz-animation-name: lights;
+    animation-name: lights;
+}
+/*end*/
+body{
+    background: rgb(16,21,54);
+}
+.wrapper{
+    width:100%;
+    max-width:630px;
+    font-family: "Helvetica Neue",Helvetica,STHeiTi,Arial,sans-serif;
+    background: rgb(16,21,54);
+    margin: 0 auto;
+    min-height: 100%;
+    font-size: 12px;
+    color: #fff;
+    .bannerBg{
+        width:100%;
+        img{
+            width:100%;
+        }
+    }
+    .content{
+        padding:0 15px 20px 15px;
+        .poker{
+            width:100%;
+            margin-top:-20%;
+            position:relative;
+            .pokerBg{
+                width:100%;
+            }
+            .lightimg{
+                width:100%;
+                position:absolute;
+                height:100%;
+                top:0;
+                background:url("../img/light2.png") no-repeat;
+                background-size:100%;
+            }
+            .pokerActive{
+                width:100%;
+                position:absolute;
+                top:0;
+                height:100%;
+                .pokerList{
+                    position:relative;
+                    padding:5% 6% 8%;
+                    width:100%;
+                    height:100%;
+                    text-align: center;
+                    a{
+                        display:inline-block;
+                        width:27%;
+                        height:27%;
+                        position:absolute;
+                        z-index: 9;
+                        
+                        img{
+                            width:100%;
+                        }
+                        &.poker1{
+                            top:7%;
+                            left:7.5%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                            -moz-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate1{
+                            transform:translate3d(106%,106%,0);
+                            -webkit-transform:translate3d(106%,106%,0);
+                            -moz-transform: translate3d(106%,106%,0);
+                        }
+                        &.poker2{
+                            top:7%;
+                            left:36.1%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate2{
+                            transform:translate3d(0,106%,0);
+                            -webkit-transform:translate3d(0,106%,0);
+                        }
+                        &.poker3{
+                            top:7%;
+                            left:65%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate3{
+                            transform:translate3d(-106%,106%,0);
+                            -webkit-transform:translate3d(-106%,106%,0);
+                        }
+                        &.poker4{
+                            top:35%;
+                            left:7.5%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate4{
+                            transform:translate3d(106%,0,0);
+                            -webkit-transform:translate3d(106%,0,0);
+                        }
+                        &.poker5{
+                            top:35%;
+                            left:65%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate5{
+                            transform:translate3d(-106%,0,0);
+                            -webkit-transform:translate3d(-106%,0,0);
+                        }
+                        &.poker6{
+                            top:63.5%;
+                            left:7.5%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate6{
+                            transform:translate3d(106%,-106%,0);
+                            -webkit-transform:translate3d(106%,-106%,0);
+                        }
+                        &.poker7{
+                            top:63.5%;
+                            left:36.1%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate7{
+                            transform:translate3d(0,-106%,0);
+                            -webkit-transform:translate3d(0,-106%,0);
+                        }
+                        &.poker8{
+                            top:63.5%;
+                            left:65%;
+                            transform: translate3d(0,0,0);
+                            -webkit-transform: translate3d(0,0,0);
+                        }
+                        &.flodAnimate8{
+                            transform:translate3d(-106%,-106%,0);
+                            -webkit-transform:translate3d(-106%,-106%,0);
+                        }
+                    }
+                    .startBtn{
+                        background:url(../img/blueBg.png) no-repeat;
+                        background-size:100%;
+                        position:absolute;
+                        left:36.1%;
+                        top:35.5%;
+                        line-height: 76px;
+                        z-index: 1;
+                        .startIcon{
+                            vertical-align: middle;
+                            width: 70%;
+                        }
+                        .loginChance{
+                            display:none;
+                            position:relative;
+                            img{
+                                margin-left:6%;
+                                width:67%;
+                            }
+                            .num{
+                                color:rgba(9, 49, 122, 1);
+                                position:absolute;
+                                font-size:12px;
+                                left:23%;
+                                font-weight: bold;
+                                top:8px;
+                                font-family: Arial;
+                            }
+                        }
+                        &.logined{
+                            line-height: 32px;
+                            padding: 1.5% 0 0 0;
+                            .loginChance{
+                                display:block;
+                            }
+                        }
+                        &.clicked{
+                            line-height: 74px;
+                            padding: 1.5% 0 0 0;
+                            background:#ad0c0c;
+                            display:none;
+                            .loginChance{
+                                display:block;
+                            }
+                        }
+                        &.finished{
+                            background:url(../img/tomorrow.png) no-repeat;
+                            background-size:100%;
+                        }
+                    }
+                }
+            }
+        }
+        .broadcast{
+            width:100%;
+            margin:6px 0 15px 0;
+            position:relative;
+            
+            .broadImg{
+                width:100%;
+            }
+            .broadList{
+                position:absolute;
+                top: 15%;
+                left: 31%;
+                height: 60%;
+                overflow: hidden;
+                .broadItem{
+                    line-height: 28px;
+                    li{
+                        position:relative;
+                        span{
+                            color:rgba(255, 236, 0, 1);
+                        }
+                    }
+                }
+            }
+        }
+        .active{
+            background:#fff;
+            border-radius: 3px;
+            padding:0 5px 5px 5px;
+            .title{
+                font-size:13px;
+                color:rgb(102,102,102);
+                padding: 7px 0 7px 0;
+            }
+            a{
+                display:block;
+                img{
+                    width:100%;
+                }
+            }
+        }
+        .rule{
+            h3{
+                font-size:16px;
+                text-align:center;
+                background: url(../img/line.png) no-repeat 0;
+                background-size: 100%;
+                width: 100%;
+                margin: 15px 0 2px 0;
+            }
+            p{
+                line-height:26px;
+                position:relative;
+                padding-left: 10px;
+                &::before{
+                    position:absolute;
+                    content:"";
+                    background:transparent;
+                    border:1px solid #fff;
+                    border-radius: 50%;
+                    width:5px;
+                    height:5px;
+                    left:0;
+                    top:11px;
+                }
+            }
+        }
+        .popUp{
+            background:rgba(0,0,0,0.5);
+            position:fixed;
+            top:0;
+            left:0;
+            bottom:0;
+            width:100%;
+            
+            .popPos{
+                width:90%;
+                margin:25% auto 0;
+                max-width:600px;
+                position:relative;
+                .tipClose{
+                    position: absolute;
+                    right:1%;
+                    top:8%;
+                    width:25px;
+                    background:url(../img/tipclose.png) no-repeat;
+                    background-size:100%;
+                    height:11%;
+                    z-index: 9;
+                }
+                .popDetails{
+                    background:url(../img/tipBg1.png) no-repeat;
+                    background-size:100%;
+                    position: relative;
+                    z-index: 2;
+                    margin:0 auto;
+                    padding-bottom: 30px;
+                    .popTitle{
+                        position:relative;
+                        top: 48px;
+                        left: 33%;
+                        img{
+                            width:100px;
+                        }
+                    }
+                    .popContent{
+                        text-align: center;
+                        padding: 25% 25px 30px 25px;
+                        position: relative;
+                        
+                        .productImg{
+                            width:80%;
+                            margin:0 auto;
+                        }
+                        p{
+                            font-size:15px;
+                            color:rgba(51, 51, 51, 1);
+                            margin: 10px 0 15px 0;
+                        }
+                        .validateBtn{
+                            background:url(../img/redBtn.png) no-repeat;
+                            width: 100%;
+                            background-size: 100%;
+                            height: 45px;
+                            line-height: 40px;
+                            padding-bottom: 3%;
+                            box-sizing: content-box;
+                            img{
+                                width:180px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .popSuccess{
+            .popPos{
+                .popDetails{
+                    .popTitle{
+                        top:50px;
+                        left:31%;
+                        img{
+                            width:110px;
+                        }
+                    }
+                    .popContent{
+                        padding: 36% 25px 30px 25px;
+                        p{
+                            margin:0;
+                            font-size:16px;
+                        }
+                        .shareBtn,.washBtn{
+                            background: url(../img/redBtn.png) no-repeat;
+                            width: 100%;
+                            background-size: 100%;
+                            height: 45px;
+                            line-height: 40px;
+                            padding-bottom: 4%;
+                            box-sizing: content-box;
+                            img{
+                                width:45px;
+                            }
+                        }
+                        .shareBtn{
+                            margin-top:25px;
+                        }
+                        .washBtn{
+                            background: url(../img/yellowBtn.png) no-repeat;
+                            background-size: 100%;
+                            img{
+                                width:60px;
+                            }
+                        }
+                        .appdown{
+                            img{
+                                width:160px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.aboveTwice{
+                .popPos{
+                    .popDetails{
+                        background: url(../img/tipBg2.png) no-repeat;
+                        background-size: 100%;
+                        .popContent{
+                            .moreOne{
+                                display:none;
+                            }
+                            .shareBtn{
+                                display:none;
+                            }
+                            .washBtn{
+                                background: url(../img/redBtn.png) no-repeat;
+                                background-size: 100%;
+                                margin-top:40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .popCode{
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            .popPos{
+                width: 90%;
+                margin: 40% auto 0;
+                max-width: 600px;
+                position: relative;
+                .tipClose{
+                    position: absolute;
+                    right: 1%;
+                    top: -60px;
+                    width: 25px;
+                    background: url(../img/tipclose.png) no-repeat;
+                    background-size: 100%;
+                    height: 80px;
+                    z-index: 9;
+                }
+                .popDetails{
+                    background:#fff;
+                    border-radius: 8px;
+                    position: relative;
+                    z-index: 2;
+                    margin: 0 auto;
+                    padding: 40px 20px 20px 20px;
+                    .title{
+                        font-size:15px;
+                        color:rgb(51,51,51);
+                        text-align: center;
+                    }
+                    .subtitle{
+                        font-size:12px;
+                        color:rgb(102,102,102);
+                        text-align: center;
+                        display: none;
+                    }
+                    .inputTel input,.validCode input{
+                        width:100%;
+                        height:40px;
+                        border:1px solid rgb(217,217,217);
+                        border-radius: 3px;   
+                        padding-left:40px;
+                        font-size:14px;
+                        color:rgb(51,51,51);
+                    }
+                    .inputTel,.validCode{
+                        position:relative;
+                        &::after{
+                            content:"";
+                            position:absolute;
+                            width:15px;
+                            height:16px;
+                            background:url(../img/lock.png) no-repeat;
+                            background-size: 100%;
+                            left:12px;
+                            top:11px;
+                        }
+                        margin:30px 0 10px 0;
+                    }
+                    .validCode{
+                        margin:15px 0 10px 0;
+                        display: none;
+                    }
+                    .subBtn{
+                        background:#df3348;
+                        height:40px;
+                        line-height:40px;
+                        text-align: center;
+                        color:#fff;
+                        font-size:16px;
+                        border-radius: 4px;
+                    }
+                    .tipTxt{
+                        color:rgb(153,153,153);
+                        text-align: right;
+                        margin: 20px 0 5px 0;
+                        visibility: hidden;
+                        span{
+                            color:rgb(47,108,182);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:375px) {
+    .wrapper{
+        .content{
+            .poker{
+                .pokerActive{
+                    .pokerList{
+                        .startBtn{
+                            .startIcon{
+                                margin-top:12%;
+                            }
+                            .loginChance{
+                                .num{
+                                    font-size: 13px;
+                                    left: 24%;
+                                    top: 24%;
+                                }
+                            }
+                            &.logined{
+                                line-height:40px;
+                                padding:1.5% 0 0 0;
+                                .startIcon{
+                                    margin-top:0;
+                                }
+                            }
+                            &.clicked{
+                                line-height: 90px;
+                                .loginChance{
+                                    .num{
+                                        top:11%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .broadcast{
+                .broadList{
+                    top:18%;
+                    height:53%;
+                }
+            }
+            .popUp{
+                .popPos{
+                    .tipClose{
+                        height:12%;
+                    }
+                    .popDetails{
+                        .popTitle{
+                            top:55px;
+                            img{
+                                width:115px;
+                            }
+                        }
+                        .popContent{
+                            p{
+                                margin: 10px 0 15px 0;
+                            }
+                            .validateBtn{
+                                height: 55px;
+                                line-height: 50px;
+                                img{
+                                    width:200px; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .popSuccess{
+                .popPos{
+                    .popDetails{
+                        .popTitle{
+                            top:60px;
+                            img{
+                                width:125px; 
+                            }
+                        }
+                        .popContent{
+                            padding: 38% 25px 30px 25px;
+                            p{
+                                margin:0;
+                            }
+                            .shareBtn,.washBtn{
+                                padding-bottom: 7%;
+                                line-height: 48px;
+                            }
+                            .shareBtn{
+                                img{
+                                    width:50px;
+                                }
+                            }
+                            .washBtn{
+                                img{
+                                    width:70px;
+                                }
+                            }
+                            .appdown{
+                                line-height: 55px;
+                                img{
+                                    width:190px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.aboveTwice .popPos .popDetails .popContent{
+                    .washBtn{
+                        margin-top: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:414px) {
+    .wrapper{
+        .content{
+            .poker{
+                .pokerActive{
+                    .pokerList{
+                        .startBtn{
+                            .startIcon{
+                                margin-top:24%;
+                            }
+                            .loginChance{
+                                .num{
+                                    left: 24.5%;
+                                    top: 25%;
+                                }
+                            }
+                            &.logined{
+                                line-height:40px;
+                                padding:3% 0 0 0;
+                            }
+                            &.clicked{
+                                line-height: 100px;
+                                .loginChance{
+                                    .num{
+                                        top:10%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .broadcast{
+                .broadList{
+                    top:20%;
+                }
+            }
+            .popUp{
+                .popPos .popDetails{
+                    .popTitle{
+                        top:60px;
+                        img{
+                            width:125px;
+                        }
+                    }
+                    .popContent{
+                        p{
+                            margin: 10px 0 20px 0;
+                        }
+                        .validateBtn{
+                            height: 60px;
+                            line-height: 55px;
+                            img{
+                                width:220px;
+                            }
+                        }
+                    }
+                }
+            }
+            .popSuccess{
+                .popPos{
+                    .popDetails{
+                        .popTitle{
+                            top:65px;
+                            img{
+                                width:135px; 
+                            }
+                        }
+                        .popContent{
+                            padding: 38% 25px 30px 25px;
+                            p{
+                                margin:0;
+                            }
+                            .shareBtn,.washBtn{
+                                padding-bottom: 9%;
+                                line-height: 55px;
+                            }
+                            .shareBtn{
+                                margin-top:35px;
+                                img{
+                                    width:55px;
+                                }
+                            }
+                            .washBtn{
+                                img{
+                                    width:75px;
+                                }
+                            }
+                            .appdown{
+                                line-height: 60px;
+                                img{
+                                    width:220px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.aboveTwice .popPos .popDetails .popContent{
+                    .washBtn{
+                        margin-top: 55px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:630px) {
+    .wrapper{
+        .content{
+            .poker{
+                .pokerActive{
+                    .pokerList{
+                        .startBtn{
+                            .startIcon{
+                                margin-top:28%;
+                            }
+                            &.logined{
+                                line-height:45px;
+                                padding:2% 0 0 0;
+                                .loginChance{
+                                    .num{
+                                        top:34%;
+                                        left:25%;
+                                        font-size:18px;
+                                    }
+                                }
+                            }
+                            &.clicked{
+                                line-height: 125px;
+                                .loginChance{
+                                    .num{
+                                        top: 12%;
+                                        font-size: 18px;
+                                        left: 25%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .broadcast{
+                .broadList{
+                    top:30%;
+                    height:28%;
+                }
+            }
+            .popUp{
+                .popPos{
+                    .tipClose{
+                        right: 18%;
+                        width:30px;
+                        height:60px;
+                    }
+                    .popDetails{
+                        max-width:400px;
+                        .popTitle{
+                            top:66px;
+                            img{
+                                width:135px;
+                            }
+                        }
+                        .popContent{
+                            p{
+                                margin: 10px 0 25px 0;
+                            }
+                            .validateBtn{
+                                height: 65px;
+                                line-height: 60px;
+                                img{
+                                    width:240px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .popSuccess{
+                .popPos{
+                    .popDetails{
+                        .popTitle{
+                            top:70px;
+                            img{
+                                width:145px; 
+                            }
+                        }
+                        .popContent{
+                            padding: 38% 25px 30px 25px;
+                            p{
+                                margin:0;
+                                line-height: 24px;
+                            }
+                            .shareBtn,.washBtn{
+                                padding-bottom: 11%;
+                                line-height: 60px;
+                            }
+                            .shareBtn{
+                                margin-top:35px;
+                                img{
+                                    width:55px;
+                                }
+                            }
+                            .washBtn{
+                                img{
+                                    width:75px;
+                                }
+                            }
+                            .appdown{
+                                line-height: 63px;
+                                img{
+                                    width:240px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.aboveTwice .popPos .popDetails .popContent{
+                    .washBtn{
+                        margin-top: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

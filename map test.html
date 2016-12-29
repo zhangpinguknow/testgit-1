@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+	var arr = ["apple","orange","apple","orange","pear","orange"];
+ 
+function getWordCnt(){
+  return arr.reduce(function(prev,next){
+    prev[next] = (prev[next] + 1) || 1;
+    return prev;
+  },{});
+}
+ 
+console.log(getWordCnt());
+</script>

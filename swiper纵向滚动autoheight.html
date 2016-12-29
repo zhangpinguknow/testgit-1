@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link href="css/swiper.min.css" rel="stylesheet" />
+		<style>
+			*{
+				padding:0;
+				margin:0;
+			}
+			.wrapper{
+			    font-family: "微软雅黑";
+			    background: #eee;
+			    margin: 0 auto;
+			    height: 100%;
+			    font-size: 14px;
+			    overflow-x: hidden;
+			}
+			.swiper-container{
+				width:100%;
+				height:100%;
+			}
+			.swiper-slide{
+				color: #fff;
+			    line-height: 300px;
+			    text-align: center;
+			    font-size: 50px;
+			    overflow: auto;
+			}
+			.blue-slide{
+				background: #4390EE;
+			}
+			.red-slide{
+				background: #CA4040;
+			}
+			.orange-slide{
+				background: #FF8604;
+			}
+			.wrapper .content{
+				height:100px;
+				background:burlywood;
+			}
+			.wrapper .tablist{
+				display:-webkit-box;
+				display:-webkit-flex;
+				display:box;
+				display: flexbox;
+				display:flex;
+			}
+			.wrapper .tablist .item{
+				-webkit-box-flex:1;
+				-webkit-flex:1;
+				flex:1;
+				text-align: center;
+				border-right: 1px solid #d9d9d9;
+				height: 44px;
+				line-height: 44px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="tablist" id="tablist">
+				<div class="item">slide1</div>
+				<div class="item">slide2</div>
+				<div class="item">slide3</div>
+				<div class="item">slide4</div>
+				<div class="item">slide5</div>
+				<div class="item">slide6</div>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide blue-slide" style="height:300px;">
+						Slide 1</div>
+					<div class="swiper-slide red-slide" style="height:500px;line-height:500px;">
+						Slide 2</div>
+					<div class="swiper-slide orange-slide" style="height:300px;">
+						Slide 3</div>
+					<div class="swiper-slide blue-slide" style="height:300px;">
+						Slide 4</div>
+					<div class="swiper-slide red-slide" style="height:500px;line-height:500px;">
+						Slide 5</div>
+					<div class="swiper-slide orange-slide" style="height:300px;">
+						Slide 6</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/zepto.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+//	var swiper = new Swiper('.swiper-container', {
+//		//direction:'vertical'  //不行无效，如果总想的话
+//      autoHeight: true 
+// });
+   
+   var swiper = new Swiper('.swiper-container', {
+        //direction:'vertical',
+        slidesPerView:'auto'
+        //freeMode:true
+   });
+   $("#tablist").on("click",".item",function(){
+    	var index=$("#tablist .item").index($(this));
+    	swiper.slideTo(index);
+   })
+   var startScroll, touchStart, touchCurrent;
+	swiper.slides.on('touchstart', function (e) {
+	    startScroll = this.scrollTop;
+	    touchStart = e.targetTouches[0].pageY;
+	}, true);
+	swiper.slides.on('touchmove', function (e) {
+	    touchCurrent = e.targetTouches[0].pageY;
+	    var touchesDiff = touchCurrent - touchStart;
+	    var slide = this;
+	    var onlyScrolling =
+	            ( slide.scrollHeight > slide.offsetHeight ) && //allow only when slide is scrollable
+	            (
+	                ( touchesDiff < 0 && startScroll === 0 ) || //start from top edge to scroll bottom
+	                ( touchesDiff > 0 && startScroll === ( slide.scrollHeight - slide.offsetHeight ) ) || //start from bottom edge to scroll top
+	                ( startScroll > 0 && startScroll < ( slide.scrollHeight - slide.offsetHeight ) ) //start from the middle
+	            );
+	    if (onlyScrolling) {
+	        e.stopPropagation();
+	    }
+	}, true);
+</script>

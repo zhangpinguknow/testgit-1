@@ -21,7 +21,7 @@
 	$.fn.dict_item_build_function = function() {
 		this.each(function() {
 			$.extend(this, {
-				full : function(item) { // 填充111111
+				full : function(item) { // 填充11111111
 					var key = $("<span></span>").addClass("key").html(item.key).appendTo(this) ;
 					var value = $("<span></span>").addClass("value").html(item.value).appendTo(this) ;
 					var param_a = $("<span></span>").addClass("param_a").html(item.param_a).appendTo(this) ;

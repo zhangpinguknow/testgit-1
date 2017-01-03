@@ -13,7 +13,7 @@
 
 	/* 构建容器功能  */
 	$.fn.dict_item_content_build_function = function() {
-		
+		asdfasfsdf
 		
 	}
 	

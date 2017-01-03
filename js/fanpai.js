@@ -1,7 +1,7 @@
 (function($) {
 
 	function Pointer(x, y) {
-		this.x = x ;
+		this.x = x222222 ;
 		this.y = y ;
 	}
 	function Position(left, top) {
@@ -11,9 +11,9 @@
 	
 	$.fn.dom = function() { return this[0] ; }
 
-	/* 构建容器功能  */
+	/* 构建容器功能1111  */
 	$.fn.dict_item_content_build_function = function() {
-		2222222
+		
 		
 	}
 	
